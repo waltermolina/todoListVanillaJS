@@ -125,7 +125,7 @@ addTaskBtn.addEventListener("click", function (e) {
 
 //Agregamos evento click en tasksList
 tasksList.addEventListener("click", (e) => {
-    console.log(e.target);
+    
     const taskToSelect = e.target.closest("li").getAttribute("data-task-id");
 
     if (e.target.classList.contains("deleteTaskBtn") || e.target.parentElement.classList.contains("deleteTaskBtn")) {
