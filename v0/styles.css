@@ -97,6 +97,13 @@ main > form#newTask > button > i {
     font-size: 1.25rem;
 }
 
+main > hr {
+    max-width: 60rem;
+    width: 90vw;
+    border-color: rgba(255,255,255,0.2);
+    box-shadow: 0 0.5rem 0.5rem 0 rgb(0 0 0 / 10%);
+}
+
 main > #tasksList {
     max-width: 60rem;
     width: 90vw;
