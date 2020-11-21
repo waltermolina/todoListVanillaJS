@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body{
+    background: #222;
+    height: 100vh;
+    margin: 0 0 0 0;
+    font-family: 'Inter', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100vh;
+    align-items: center;
+}
+
+main > header {
+    width: 100%;
+    min-height: 6rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main > header > h1 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 400;
+    color: rgba(255,255,255,0.5);
+}
+
+main > form#newTask {
+    max-width: 60rem;
+    width: 90vw;
+    height: 4rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    position: sticky;
+    top: 1rem;
+    margin-bottom: 1rem;
+}
+
+main > form#newTask > input{
+    background-color: rgba(255,255,255,0.1);
+    border: none;
+    outline: none;
+    padding: 0 6rem 0 1rem;
+    font-size: 1rem;
+    height: 4rem;
+    border-radius: 0.25rem;
+    width: 100%;
+    backdrop-filter: blur(0.5rem);
+    box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.25);
+    transition: 0.3s all;
+}
+
+main > form#newTask > input:hover,
+main > form#newTask > input:active,
+main > form#newTask > input:focus {
+    background-color: rgba(255,255,255,0.5);
+    box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.25);
+}
+
+main > form#newTask > button {
+    background:rgba(255,255,255,0);
+    color: rgba(255,255,255,0.5);
+    border: 0.1rem solid rgba(255,255,255,0.5);
+    box-sizing: border-box;
+    outline: none;
+    padding: 0;
+    height: 3rem;
+    border-radius: 0.25rem;
+    width: 3rem;
+    position: absolute;
+    right: 0.5rem;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+main > form#newTask > button:hover,
+main > form#newTask > button:active,
+main > form#newTask > input:hover + button,
+main > form#newTask > input:active + button {
+    background: rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.7);
+    border: 0.1rem solid rgba(255,255,255,0.7);
+}
+
+main > form#newTask > button > i {
+    font-size: 1.25rem;
+}
+
+main > hr {
+    max-width: 60rem;
+    width: 90vw;
+    border-color: rgba(255,255,255,0.2);
+    box-shadow: 0 0.5rem 0.5rem 0 rgb(0 0 0 / 10%);
+}
+
+main > #tasksList {
+    max-width: 60rem;
+    width: 90vw;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+main > #tasksList > li {
+    background-color: rgba(255,255,255,0.1);
+    padding: 0.5rem;
+    display: flex;
+    min-height: 4rem;
+    box-sizing: border-box;
+    flex-direction: row;
+    margin-bottom: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.25rem;
+    transition: 0.3s all;
+}
+
+main > #tasksList > li:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+main > #tasksList > li > div {
+    display: flex;
+    margin: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+main > #tasksList > li > div > input {
+    margin-right: 1rem;
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+}
+
+main > #tasksList > li > div > input:checked + p{
+    text-decoration: line-through;
+}
+
+main > #tasksList > li > div > p {
+    color: rgba(255,255,255,0.5)
+}
+
+main > #tasksList > li > .buttons > button.action-btn {
+    background:rgba(255,255,255,0);
+    color: rgba(255,255,255,0.5);
+    border: 0.1rem solid rgba(255,255,255,0.5);
+    box-sizing: border-box;
+    outline: none;
+    padding: 0;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: 0.3s all;
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+}
+
+main > #tasksList > li > .buttons > button.action-btn:last-child {
+    margin-right: 0;
+}
+
+main > #tasksList > li > .buttons > button.action-btn > i {
+    font-size: 1.25rem;
+}
+
+main > #tasksList > li > .buttons > button:hover,
+main > #tasksList > li > .buttons > button:active {
+    background: rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.7);
+    border: 0.1rem solid rgba(255,255,255,0.7);
+}
+
+main > #emptyListPlaceholder {
+    
+    display: flex;
+    max-width: 60rem;
+    width: 90vw;
+    box-sizing: border-box;
+    margin-bottom: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 0.3s all;
+    font-size: 3rem;
+    color: rgba(255,255,255,0.1)
+}
