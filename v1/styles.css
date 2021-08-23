@@ -16,12 +16,13 @@ main {
 }
 
 main > header {
-    width: 100%;
+    max-width: 60rem;
+    width: 90vw;
     min-height: 6rem;
     margin-bottom: 3rem;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
 }
@@ -31,6 +32,18 @@ main > header > h1 {
     margin: 0;
     font-weight: 400;
     
+}
+
+main > header > button {
+    box-sizing: border-box;
+    outline: none;
+    padding: 0;
+    height: 4rem;
+    border-radius: 0.25rem;
+    width: 4rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s all;
 }
 
 main > form#newTask {
